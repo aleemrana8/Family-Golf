@@ -12,14 +12,17 @@
 ![EJS](https://img.shields.io/badge/EJS-B4CA65?style=for-the-badge&logo=ejs&logoColor=black)
 ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 
+[![CI/CD](https://github.com/aleemrana8/Family-Golf/actions/workflows/ci.yml/badge.svg)](https://github.com/aleemrana8/Family-Golf/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Production_Ready-brightgreen?style=for-the-badge)]()
 [![API](https://img.shields.io/badge/REST_API-Included-blue?style=for-the-badge)]()
+[![Tests](https://img.shields.io/badge/Tests-21_Passing-success?style=for-the-badge)]()
 
-**A modern full-stack web application for Sidcup Family Golf — featuring online booking, contact forms, newsletter subscriptions, customer reviews, GSAP scroll animations, and a SQLite-powered backend. No `.html` extensions — clean server-side routing throughout.**
+**A modern full-stack web application for Sidcup Family Golf — featuring online booking, contact forms, newsletter subscriptions, customer reviews, GSAP scroll animations, and a SQLite-powered backend. Includes a full CI/CD pipeline with GitHub Actions, automated testing, Docker builds, and deploy verification. No `.html` extensions — clean server-side routing throughout.**
 
-[Live Demo](#-getting-started) · [API Docs](#-api-endpoints) · [Docker Setup](#-run-with-docker)
+[Live Demo](#-getting-started) · [API Docs](#-api-endpoints) · [CI/CD Pipeline](#-cicd-pipeline) · [Docker Setup](#-run-with-docker)
 
 ---
 
@@ -140,6 +143,11 @@ Family-Golf/
 ├── public/                 # Static assets
 │   ├── css/style.css       # Full stylesheet (~700 lines)
 │   └── js/app.js           # GSAP animations + form handlers
+├── tests/                  # Automated test suite
+│   └── app.test.js         # 21 API & page route tests
+├── .github/
+│   └── workflows/
+│       └── ci.yml          # CI/CD pipeline (GitHub Actions)
 ├── data/                   # SQLite database (auto-created)
 ├── package.json            # Dependencies & scripts
 ├── Dockerfile              # Node.js Alpine container
@@ -234,6 +242,9 @@ curl -X POST http://localhost:3000/api/bookings \
 | **Animation** | ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat-square&logo=greensock&logoColor=white) | Scroll-triggered animations |
 | **Security** | ![Helmet](https://img.shields.io/badge/Helmet-purple?style=flat-square) | HTTP security headers |
 | **Container** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) | Containerized deployment |
+| **CI/CD** | ![GitHub Actions](https://img.shields.io/badge/Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white) | Automated pipeline |
+| **Testing** | ![Node Test](https://img.shields.io/badge/node:test-339933?style=flat-square&logo=node.js&logoColor=white) | 21 automated tests |
+| **Registry** | ![GHCR](https://img.shields.io/badge/GHCR-181717?style=flat-square&logo=github&logoColor=white) | Docker image registry |
 | **Typography** | ![Google Fonts](https://img.shields.io/badge/Montserrat-4285F4?style=flat-square&logo=google&logoColor=white) | Font family |
 | **Icons** | ![Remix](https://img.shields.io/badge/Remix_Icons-2F3337?style=flat-square) | UI iconography |
 
@@ -249,6 +260,84 @@ curl -X POST http://localhost:3000/api/bookings \
 - **Input Validation** — Server-side validation on all form endpoints
 - **CORS-safe** — No cross-origin API exposure by default
 - **Compression** — Gzip response compression for performance
+
+---
+
+## 🔄 CI/CD Pipeline
+
+This project uses **GitHub Actions** for continuous integration and delivery. The pipeline runs automatically on every push and pull request to `main`.
+
+<div align="center">
+
+```mermaid
+graph LR
+    A[Push / PR] --> B[Lint & Validate]
+    B --> C[Test - Node 18, 20, 22]
+    C --> D[Build Docker Image]
+    D --> E[Push to GHCR]
+    E --> F[Deploy Smoke Test]
+    style A fill:#95c11e,color:#000
+    style B fill:#2088FF,color:#fff
+    style C fill:#339933,color:#fff
+    style D fill:#2496ED,color:#fff
+    style E fill:#8B5CF6,color:#fff
+    style F fill:#059669,color:#fff
+```
+
+</div>
+
+### Pipeline Jobs
+
+| Stage | Job | Description | Trigger |
+|:---:|:---:|:---|:---:|
+| 1️⃣ | **Lint & Validate** | Syntax check all JS files, validate `package.json` | Push & PR |
+| 2️⃣ | **Test** | Run 21 automated tests across Node 18, 20, 22 | Push & PR |
+| 3️⃣ | **Docker Build** | Build & push image to GitHub Container Registry | Push to `main` |
+| 4️⃣ | **Deploy Verification** | Start server, smoke test all routes & APIs | Push to `main` |
+
+### Pipeline File
+
+📄 [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
+
+### Run Locally
+
+```bash
+# Run the full test suite
+npm test
+```
+
+Expected output:
+```
+✔ Page Routes (6 tests)
+✔ API /api/newsletter (3 tests)
+✔ API /api/bookings (4 tests)
+✔ API /api/contact (2 tests)
+✔ API /api/reviews (4 tests)
+✔ Security (2 tests)
+# 21 pass, 0 fail
+```
+
+---
+
+## 🧪 Testing
+
+The project includes **21 automated tests** using Node.js built-in test runner (`node:test`) — zero additional test dependencies.
+
+| Suite | Tests | What's Covered |
+|-------|:-----:|----------------|
+| **Page Routes** | 6 | All 5 pages return 200, unknown routes return 404 |
+| **Newsletter API** | 3 | Valid subscribe, invalid email, missing email |
+| **Bookings API** | 4 | Valid booking, missing fields, invalid email, list bookings |
+| **Contact API** | 2 | Valid message, missing fields |
+| **Reviews API** | 4 | List reviews, valid submit, invalid rating, missing fields |
+| **Security** | 2 | Helmet headers present, compression active |
+
+### Test Architecture
+
+- **No external test framework** — uses `node:test` and `node:assert` (built-in since Node 18)
+- **Real HTTP requests** — tests spin up the Express server on a random port
+- **Isolated database** — each test run uses a fresh SQLite instance
+- **CI matrix** — tests run on Node 18, 20, and 22 in parallel
 
 ---
 

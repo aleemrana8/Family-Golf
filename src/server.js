@@ -63,20 +63,22 @@ app.use((err, req, res, next) => {
 });
 
 // Initialize database then start server
-db.initialize().then(() => {
-  app.listen(PORT, () => {
-    console.log(`\n  Family Golf is running at:`);
-    console.log(`  -> Local:     http://localhost:${PORT}`);
-    console.log(`  -> Lessons:   http://localhost:${PORT}/lessons`);
-    console.log(`  -> Adventure: http://localhost:${PORT}/adventure`);
-    console.log(`  -> Book:      http://localhost:${PORT}/book`);
-    console.log(`  -> Contact:   http://localhost:${PORT}/contact`);
-    console.log(`\n  API Endpoints:`);
-    console.log(`  -> GET  /api/reviews`);
-    console.log(`  -> POST /api/bookings`);
-    console.log(`  -> POST /api/contact`);
-    console.log(`  -> POST /api/newsletter\n`);
+if (require.main === module) {
+  db.initialize().then(() => {
+    app.listen(PORT, () => {
+      console.log(`\n  Family Golf is running at:`);
+      console.log(`  -> Local:     http://localhost:${PORT}`);
+      console.log(`  -> Lessons:   http://localhost:${PORT}/lessons`);
+      console.log(`  -> Adventure: http://localhost:${PORT}/adventure`);
+      console.log(`  -> Book:      http://localhost:${PORT}/book`);
+      console.log(`  -> Contact:   http://localhost:${PORT}/contact`);
+      console.log(`\n  API Endpoints:`);
+      console.log(`  -> GET  /api/reviews`);
+      console.log(`  -> POST /api/bookings`);
+      console.log(`  -> POST /api/contact`);
+      console.log(`  -> POST /api/newsletter\n`);
+    });
   });
-});
+}
 
-module.exports = app;
+module.exports = { app, db };
