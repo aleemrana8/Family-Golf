@@ -1,22 +1,25 @@
 <div align="center">
 
-# ⛳ Family Golf — Sidcup Family Golf Experience
+# ⛳ Family Golf — Full-Stack Golf Experience Platform
 
-<img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1200&h=400&fit=crop&crop=center" alt="Golf Course Banner" width="100%" style="border-radius: 12px;" />
+<img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1200&h=400&fit=crop&crop=center" alt="Golf Course Banner" width="100%" />
 
 <br/>
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![EJS](https://img.shields.io/badge/EJS-B4CA65?style=for-the-badge&logo=ejs&logoColor=black)
 ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Live-brightgreen?style=for-the-badge)]()
+[![Status](https://img.shields.io/badge/Status-Production_Ready-brightgreen?style=for-the-badge)]()
+[![API](https://img.shields.io/badge/REST_API-Included-blue?style=for-the-badge)]()
 
-*A modern, animated landing page for Sidcup Family Golf — delivering an immersive, scroll-driven experience with GSAP animations, custom cursor effects, and a responsive design.*
+**A modern full-stack web application for Sidcup Family Golf — featuring online booking, contact forms, newsletter subscriptions, customer reviews, GSAP scroll animations, and a SQLite-powered backend. No `.html` extensions — clean server-side routing throughout.**
+
+[Live Demo](#-getting-started) · [API Docs](#-api-endpoints) · [Docker Setup](#-run-with-docker)
 
 ---
 
@@ -24,23 +27,29 @@
 
 ## 🎯 Project Goal
 
-Build a **production-ready, visually stunning landing page** for a family golf facility that captures the energy and fun of the venue. The site leverages cutting-edge scroll animations and interactive UI to keep visitors engaged and drive footfall to the venue.
+Build a **production-ready, full-stack golf facility platform** that goes beyond a static landing page. The application provides real functionality — online booking, customer engagement through reviews and newsletters, contact management — all powered by an Express.js backend with SQLite persistence.
 
 ## 📌 Purpose
 
-- Showcase the golf facility's services — driving range, adventure golf, lessons, and café
-- Create a memorable first impression with cinematic hero video and smooth animations
-- Provide visitors with quick access to key information and calls to action
-- Demonstrate modern frontend development techniques with GSAP & ScrollTrigger
+| Purpose | Description |
+|---------|-------------|
+| **Customer Booking** | Allow visitors to reserve driving range slots, golf lessons, adventure golf and party packages online |
+| **Customer Engagement** | Newsletter subscriptions and review system to build community |
+| **Information Hub** | Showcase all services — TopTracer range, adventure golf, lessons, café |
+| **Contact Management** | Structured contact form with server-side storage |
+| **Immersive UX** | Cinematic hero video, GSAP scroll animations, custom cursor effects |
 
 ## 🔭 Scope
 
 | Area | Details |
 |------|---------|
-| **Type** | Static frontend website |
-| **Target Audience** | Families, golf enthusiasts, local visitors |
-| **Deployment** | Docker (Nginx) / Static hosting |
-| **Browser Support** | Chrome, Firefox, Edge, Safari (modern) |
+| **Type** | Full-stack web application (Node.js + Express + SQLite) |
+| **Frontend** | EJS templates, GSAP animations, responsive CSS |
+| **Backend** | Express.js REST API with server-side rendering |
+| **Database** | SQLite (via sql.js — zero native dependencies) |
+| **Pages** | Home, Golf Lessons, Adventure Golf, Book Now, Contact |
+| **API Routes** | Bookings, Contact, Newsletter, Reviews |
+| **Deployment** | Docker / Node.js |
 
 ---
 
@@ -50,52 +59,56 @@ Build a **production-ready, visually stunning landing page** for a family golf f
 <table>
 <tr>
 <td align="center" width="25%">
-<img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=300&h=200&fit=crop" width="100%" alt="Golf Driving Range" style="border-radius:8px;" /><br/>
-<b>🏌️ TopTracer Range</b><br/>
-46-bay floodlit driving range with TopTracer technology
+<img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=300&h=200&fit=crop" width="100%" alt="Driving Range" /><br/>
+<b>🏌️ Online Booking System</b><br/>
+Book driving range, lessons, adventure golf & parties with instant confirmation
 </td>
 <td align="center" width="25%">
-<img src="https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=300&h=200&fit=crop" width="100%" alt="Adventure Golf" style="border-radius:8px;" /><br/>
-<b>🦕 Adventure Golf</b><br/>
-Two 18-hole dinosaur themed crazy golf courses
+<img src="https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=300&h=200&fit=crop" width="100%" alt="Adventure Golf" /><br/>
+<b>🦕 Adventure Golf Pages</b><br/>
+Dedicated pages for Jurassic & Volcano courses with pricing
 </td>
 <td align="center" width="25%">
-<img src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=300&h=200&fit=crop" width="100%" alt="Golf Lessons" style="border-radius:8px;" /><br/>
-<b>📚 Golf Lessons</b><br/>
-Professional coaching for all skill levels
+<img src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=300&h=200&fit=crop" width="100%" alt="Golf Lessons" /><br/>
+<b>📚 Lesson Catalog</b><br/>
+Private, group, junior & video analysis lessons with booking links
 </td>
 <td align="center" width="25%">
-<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=300&h=200&fit=crop" width="100%" alt="Coffee Shop" style="border-radius:8px;" /><br/>
-<b>☕ Coffee Shop</b><br/>
-On-site café for refreshments and relaxation
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=300&h=200&fit=crop" width="100%" alt="Reviews" /><br/>
+<b>⭐ Review System</b><br/>
+Customers submit reviews, moderation system, star ratings
 </td>
 </tr>
 </table>
 </div>
 
-### 🎨 Technical Features
+### 🖥️ Full-Stack Features
 
-- **🎥 Cinematic Hero Video** — Full-screen looping background video
-- **🖱️ Custom Cursor** — Interactive green cursor with blur trail effect
-- **📜 Scroll Animations** — GSAP ScrollTrigger-powered parallax and reveal effects
-- **♻️ Infinite Scroller** — Auto-scrolling marquee banner with hover effects
-- **🃏 Interactive Cards** — 3D rotation hover effects with overlay reveals
-- **📱 Responsive Navbar** — Shrinks and changes color on scroll
-- **🎨 Brand Colors** — Consistent `#95C11E` green theme throughout
+| Feature | Frontend | Backend |
+|---------|----------|---------|
+| **🗓️ Online Booking** | Form with date/time picker, activity selector | `POST /api/bookings` — validates & stores in SQLite |
+| **📧 Newsletter** | Inline subscribe form with live feedback | `POST /api/newsletter` — deduplicates emails |
+| **📞 Contact Form** | Full contact page with Google Maps embed | `POST /api/contact` — stores messages |
+| **⭐ Reviews** | Star rating cards on homepage, submit form on contact page | `GET/POST /api/reviews` — CRUD with moderation |
+| **🎥 Hero Video** | Full-screen cinematic looping background | Served as static asset |
+| **🖱️ Custom Cursor** | Interactive green cursor with glow trail | Pure JS, no library |
+| **📜 GSAP Animations** | ScrollTrigger parallax, card reveals, marquee | Client-side GSAP v3.12 |
+| **📱 Responsive** | Mobile nav toggle, stacked layouts | EJS conditional rendering |
+| **🔒 Security** | Input validation, CSRF-safe forms | Helmet, rate limiting, parameterized queries |
 
 ---
 
-## 🖼️ Preview
+## 🖼️ Pages Preview
 
 <div align="center">
 
-| Hero Section | Services Scroller |
+| 🏠 Home — Hero & Marquee | 📚 Lessons — Course Catalog |
 |:---:|:---:|
-| <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=300&fit=crop" width="400" alt="Hero Preview" /> | <img src="https://images.unsplash.com/photo-1622819584099-e04ccb14e8a7?w=500&h=300&fit=crop" width="400" alt="Services Preview" /> |
+| <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=300&fit=crop" width="400" alt="Home Page" /> | <img src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=500&h=300&fit=crop" width="400" alt="Lessons Page" /> |
 
-| Interactive Cards | Footer Section |
+| 🗓️ Book Now — Reservation Form | 📞 Contact — Form & Map |
 |:---:|:---:|
-| <img src="https://images.unsplash.com/photo-1632932693687-51f0be07868a?w=500&h=300&fit=crop" width="400" alt="Cards Preview" /> | <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=500&h=300&fit=crop" width="400" alt="Footer Preview" /> |
+| <img src="https://images.unsplash.com/photo-1632932693687-51f0be07868a?w=500&h=300&fit=crop" width="400" alt="Booking Page" /> | <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=500&h=300&fit=crop" width="400" alt="Contact Page" /> |
 
 </div>
 
@@ -105,15 +118,34 @@ On-site café for refreshments and relaxation
 
 ```
 Family-Golf/
-├── golfproject.html      # Main HTML page
-├── golfproject.css       # Styles, animations, responsive layout
-├── golfproject.js        # GSAP animations & custom cursor logic
-├── package.json          # Project metadata & dev scripts
-├── Dockerfile            # Nginx Alpine container config
-├── docker-compose.yml    # One-command Docker deployment
-├── nginx.conf            # Nginx server configuration
-├── .dockerignore         # Docker build exclusions
-└── README.md             # You are here!
+├── src/                    # Backend source code
+│   ├── server.js           # Express app entry point
+│   ├── routes/
+│   │   ├── pages.js        # Page routes (/, /lessons, /book, etc.)
+│   │   └── api.js          # REST API routes (/api/*)
+│   ├── db/
+│   │   └── database.js     # SQLite database (sql.js)
+│   └── middleware/          # Custom middleware (extensible)
+├── views/                  # EJS templates
+│   ├── home.ejs            # Homepage with reviews
+│   ├── lessons.ejs         # Golf lessons catalog
+│   ├── adventure.ejs       # Adventure golf courses
+│   ├── book.ejs            # Booking form
+│   ├── contact.ejs         # Contact form + reviews
+│   ├── 404.ejs             # Not found page
+│   ├── error.ejs           # Server error page
+│   └── partials/
+│       ├── header.ejs      # Shared nav & head
+│       └── footer.ejs      # Shared footer & scripts
+├── public/                 # Static assets
+│   ├── css/style.css       # Full stylesheet (~700 lines)
+│   └── js/app.js           # GSAP animations + form handlers
+├── data/                   # SQLite database (auto-created)
+├── package.json            # Dependencies & scripts
+├── Dockerfile              # Node.js Alpine container
+├── docker-compose.yml      # Docker Compose with volume
+├── nginx.conf              # Nginx config (for reverse proxy)
+└── README.md
 ```
 
 ---
@@ -122,8 +154,8 @@ Family-Golf/
 
 ### Prerequisites
 
-- **Node.js** (v16+) — for local dev server
-- **Docker** (optional) — for containerized deployment
+- **Node.js** v18+ ([download](https://nodejs.org))
+- **Docker** (optional, for containerized deployment)
 
 ### 🏃 Run Locally
 
@@ -132,24 +164,60 @@ Family-Golf/
 git clone https://github.com/aleemrana8/Family-Golf.git
 cd Family-Golf
 
-# Start dev server
-npx serve -s . -l 3000
+# Install dependencies
+npm install
+
+# Start the server
+npm start
 ```
 
-🔗 Open **http://localhost:3000/golfproject.html**
+🔗 **Open http://localhost:3000** — No `.html` needed!
+
+| Page | URL |
+|------|-----|
+| Home | http://localhost:3000 |
+| Golf Lessons | http://localhost:3000/lessons |
+| Adventure Golf | http://localhost:3000/adventure |
+| Book Now | http://localhost:3000/book |
+| Contact Us | http://localhost:3000/contact |
 
 ### 🐳 Run with Docker
 
 ```bash
-# Clone the repository
 git clone https://github.com/aleemrana8/Family-Golf.git
 cd Family-Golf
 
-# Build & start container
 docker compose up --build -d
 ```
 
-🔗 Open **http://localhost:8080**
+🔗 **Open http://localhost:3000**
+
+---
+
+## 📡 API Endpoints
+
+All API routes return JSON responses with `{ success, message, data? }` format.
+
+| Method | Endpoint | Description | Body |
+|--------|----------|-------------|------|
+| `GET` | `/api/reviews` | Get approved reviews | — |
+| `POST` | `/api/reviews` | Submit a review | `{ name, rating, comment }` |
+| `POST` | `/api/bookings` | Create a booking | `{ name, email, phone, date, time, activity, guests?, notes? }` |
+| `GET` | `/api/bookings` | List all bookings | — |
+| `POST` | `/api/contact` | Send a message | `{ name, email, subject, message }` |
+| `POST` | `/api/newsletter` | Subscribe to newsletter | `{ email }` |
+
+### Example — Create a Booking
+
+```bash
+curl -X POST http://localhost:3000/api/bookings \
+  -H "Content-Type: application/json" \
+  -d '{"name":"John","email":"john@mail.com","phone":"07123456789","date":"2026-06-01","time":"10:00","activity":"driving-range","guests":2}'
+```
+
+```json
+{ "success": true, "message": "Booking confirmed! We'll send a confirmation to your email." }
+```
 
 ---
 
@@ -157,33 +225,34 @@ docker compose up --build -d
 
 <div align="center">
 
-| Technology | Purpose |
-|:---:|:---:|
-| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) | Page structure & semantics |
-| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | Styling, animations & layout |
-| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | Interactivity & cursor effects |
-| ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat-square&logo=greensock&logoColor=white) | Scroll-triggered animations |
-| ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white) | Production web server |
-| ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) | Containerized deployment |
-| ![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=flat-square&logo=google&logoColor=white) | Montserrat typography |
-| ![Remix Icons](https://img.shields.io/badge/Remix_Icons-2F3337?style=flat-square&logo=remixicon&logoColor=white) | UI iconography |
+| Layer | Technology | Purpose |
+|:---:|:---:|:---:|
+| **Runtime** | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white) | Server runtime |
+| **Framework** | ![Express](https://img.shields.io/badge/Express-000?style=flat-square&logo=express&logoColor=white) | Web framework & routing |
+| **Database** | ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white) | Persistent data storage |
+| **Templating** | ![EJS](https://img.shields.io/badge/EJS-B4CA65?style=flat-square&logo=ejs&logoColor=black) | Server-side rendering |
+| **Animation** | ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat-square&logo=greensock&logoColor=white) | Scroll-triggered animations |
+| **Security** | ![Helmet](https://img.shields.io/badge/Helmet-purple?style=flat-square) | HTTP security headers |
+| **Container** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) | Containerized deployment |
+| **Typography** | ![Google Fonts](https://img.shields.io/badge/Montserrat-4285F4?style=flat-square&logo=google&logoColor=white) | Font family |
+| **Icons** | ![Remix](https://img.shields.io/badge/Remix_Icons-2F3337?style=flat-square) | UI iconography |
 
 </div>
 
 ---
 
-## 🌐 External Resources
+## 🔒 Security Features
 
-- **Video**: [Sidcup Family Golf Hero Video](https://sidcupfamilygolf.com)
-- **Animations**: [GSAP v3.12](https://gsap.com/) + [ScrollTrigger Plugin](https://gsap.com/docs/v3/Plugins/ScrollTrigger/)
-- **Fonts**: [Google Fonts — Montserrat](https://fonts.google.com/specimen/Montserrat)
-- **Icons**: [Remix Icon v3.4](https://remixicon.com/)
+- **Helmet** — Sets secure HTTP headers automatically
+- **Rate Limiting** — API routes limited to 100 req/15min per IP
+- **Parameterized Queries** — All SQL uses bound parameters (no injection)
+- **Input Validation** — Server-side validation on all form endpoints
+- **CORS-safe** — No cross-origin API exposure by default
+- **Compression** — Gzip response compression for performance
 
 ---
 
 ## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
 
 1. **Fork** the repository
 2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
@@ -195,7 +264,7 @@ Contributions are welcome! Feel free to:
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**.
 
 ---
 
@@ -203,8 +272,10 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ### ⭐ Star this repo if you found it useful!
 
-<img src="https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=250&fit=crop&crop=center" alt="Golf Sunset" width="80%" style="border-radius: 12px;" />
+<img src="https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=250&fit=crop&crop=center" alt="Golf Sunset" width="80%" />
 
-**Made with ❤️ by [Aleem Rana](https://github.com/aleemrana8)**
+**Built with ❤️ by [Aleem Rana](https://github.com/aleemrana8)**
+
+*Full-stack Node.js + Express + SQLite + GSAP — From static page to production platform*
 
 </div>

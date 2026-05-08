@@ -1,0 +1,105 @@
+<%- include('partials/header') %>
+
+<div id="main" class="page-content">
+  <section class="page-hero contact-hero">
+    <h1>CONTACT US</h1>
+    <p>We'd love to hear from you — get in touch today</p>
+  </section>
+
+  <section class="content-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+        <div class="contact-detail">
+          <i class="ri-map-pin-line"></i>
+          <div>
+            <h4>Address</h4>
+            <p>A20, Sidcup Bypass<br/>Chislehurst, Kent<br/>BR7 6RP</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <i class="ri-phone-line"></i>
+          <div>
+            <h4>Phone</h4>
+            <p>0208 309 0181</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <i class="ri-mail-line"></i>
+          <div>
+            <h4>Email</h4>
+            <p>info@sidcupfamilygolf.com</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <i class="ri-time-line"></i>
+          <div>
+            <h4>Hours</h4>
+            <p>Mon–Fri: 9AM – 10PM<br/>Sat: 8AM – 10PM<br/>Sun: 8AM – 9PM</p>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2489.123!2d0.0523!3d51.4097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a8ad7ee23c4f%3A0x7c6f4c69f1b9f5b5!2sSidcup%20Family%20Golf!5e0!3m2!1sen!2suk!4v1700000000000"
+            width="100%" height="200" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <form id="contact-form" class="form-card">
+        <h3>Send a Message</h3>
+        <div class="form-group">
+          <label for="c-name"><i class="ri-user-line"></i> Full Name *</label>
+          <input type="text" id="c-name" name="name" required placeholder="Your name"/>
+        </div>
+        <div class="form-group">
+          <label for="c-email"><i class="ri-mail-line"></i> Email *</label>
+          <input type="email" id="c-email" name="email" required placeholder="your@email.com"/>
+        </div>
+        <div class="form-group">
+          <label for="c-subject"><i class="ri-chat-3-line"></i> Subject *</label>
+          <input type="text" id="c-subject" name="subject" required placeholder="What's this about?"/>
+        </div>
+        <div class="form-group">
+          <label for="c-message"><i class="ri-message-2-line"></i> Message *</label>
+          <textarea id="c-message" name="message" rows="5" required placeholder="Your message..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">
+          <i class="ri-send-plane-fill"></i> Send Message
+        </button>
+        <p class="form-message" id="contact-msg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Leave a Review -->
+  <section class="content-section alt-bg" id="reviews">
+    <h2 class="section-heading">LEAVE A REVIEW</h2>
+    <form id="review-form" class="form-card form-narrow">
+      <div class="form-group">
+        <label for="r-name"><i class="ri-user-line"></i> Your Name *</label>
+        <input type="text" id="r-name" name="name" required placeholder="Your name"/>
+      </div>
+      <div class="form-group">
+        <label for="r-rating"><i class="ri-star-line"></i> Rating *</label>
+        <div class="star-rating">
+          <input type="radio" name="rating" value="5" id="s5"><label for="s5">★</label>
+          <input type="radio" name="rating" value="4" id="s4"><label for="s4">★</label>
+          <input type="radio" name="rating" value="3" id="s3"><label for="s3">★</label>
+          <input type="radio" name="rating" value="2" id="s2"><label for="s2">★</label>
+          <input type="radio" name="rating" value="1" id="s1"><label for="s1">★</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="r-comment"><i class="ri-chat-3-line"></i> Your Review *</label>
+        <textarea id="r-comment" name="comment" rows="4" required placeholder="Tell us about your experience..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">
+        <i class="ri-send-plane-fill"></i> Submit Review
+      </button>
+      <p class="form-message" id="review-msg"></p>
+    </form>
+  </section>
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,88 @@
+<%- include('partials/header') %>
+
+<div id="main" class="page-content">
+  <section class="page-hero book-hero">
+    <h1>BOOK YOUR VISIT</h1>
+    <p>Reserve your spot — driving range, lessons, or adventure golf</p>
+  </section>
+
+  <section class="content-section">
+    <div class="booking-container">
+      <div class="booking-info">
+        <h3>Why Book Online?</h3>
+        <div class="booking-perks">
+          <div class="perk"><i class="ri-check-double-line"></i> Instant confirmation</div>
+          <div class="perk"><i class="ri-check-double-line"></i> Guaranteed time slot</div>
+          <div class="perk"><i class="ri-check-double-line"></i> 10% online discount</div>
+          <div class="perk"><i class="ri-check-double-line"></i> Free cancellation (24h)</div>
+        </div>
+        <div class="opening-hours">
+          <h4><i class="ri-time-line"></i> Opening Hours</h4>
+          <table>
+            <tr><td>Mon – Fri</td><td>9:00 AM – 10:00 PM</td></tr>
+            <tr><td>Saturday</td><td>8:00 AM – 10:00 PM</td></tr>
+            <tr><td>Sunday</td><td>8:00 AM – 9:00 PM</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <form id="booking-form" class="form-card">
+        <h3>Make a Booking</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="b-name"><i class="ri-user-line"></i> Full Name *</label>
+            <input type="text" id="b-name" name="name" required placeholder="John Smith"/>
+          </div>
+          <div class="form-group">
+            <label for="b-email"><i class="ri-mail-line"></i> Email *</label>
+            <input type="email" id="b-email" name="email" required placeholder="john@example.com"/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="b-phone"><i class="ri-phone-line"></i> Phone *</label>
+            <input type="tel" id="b-phone" name="phone" required placeholder="07123 456789"/>
+          </div>
+          <div class="form-group">
+            <label for="b-guests"><i class="ri-group-line"></i> Guests</label>
+            <input type="number" id="b-guests" name="guests" min="1" max="20" value="1"/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="b-date"><i class="ri-calendar-line"></i> Date *</label>
+            <input type="date" id="b-date" name="date" required/>
+          </div>
+          <div class="form-group">
+            <label for="b-time"><i class="ri-time-line"></i> Time *</label>
+            <input type="time" id="b-time" name="time" required/>
+          </div>
+        </div>
+        <div class="form-group full">
+          <label for="b-activity"><i class="ri-golf-ball-line"></i> Activity *</label>
+          <select id="b-activity" name="activity" required>
+            <option value="">Select an activity...</option>
+            <option value="driving-range">Driving Range (TopTracer)</option>
+            <option value="jurassic-course">Adventure Golf — Jurassic Course</option>
+            <option value="volcano-course">Adventure Golf — Volcano Course</option>
+            <option value="private-lesson">Private Golf Lesson</option>
+            <option value="group-lesson">Group Golf Lesson</option>
+            <option value="junior-academy">Junior Academy</option>
+            <option value="video-analysis">Video Swing Analysis</option>
+            <option value="party-package">Party Package</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label for="b-notes"><i class="ri-sticky-note-line"></i> Notes</label>
+          <textarea id="b-notes" name="notes" rows="3" placeholder="Any special requests or requirements..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">
+          <i class="ri-calendar-check-line"></i> Confirm Booking
+        </button>
+        <p class="form-message" id="booking-msg"></p>
+      </form>
+    </div>
+  </section>
+</div>
+
+<%- include('partials/footer') %>

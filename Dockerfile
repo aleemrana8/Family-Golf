@@ -1,16 +1,12 @@
-FROM nginx:alpine
+FROM node:20-alpine
 
-# Remove default nginx config
-RUN rm /etc/nginx/conf.d/default.conf
+WORKDIR /app
 
-# Copy custom nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY package.json ./
+RUN npm install --production
 
-# Copy static site files
-COPY golfproject.html /usr/share/nginx/html/
-COPY golfproject.css /usr/share/nginx/html/
-COPY golfproject.js /usr/share/nginx/html/
+COPY . .
 
-EXPOSE 80
+EXPOSE 3000
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", "src/server.js"]
