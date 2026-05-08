@@ -56,6 +56,8 @@ Build a **production-ready, full-stack golf facility platform** that goes beyond
 | **Database** | SQLite (via sql.js — zero native dependencies) |
 | **Pages** | Home, Golf Lessons, Adventure Golf, Book Now, Contact |
 | **API Routes** | Bookings, Contact, Newsletter, Reviews |
+| **Currency** | PKR (Pakistani Rupee) |
+| **Location** | Islamabad, Pakistan |
 | **Deployment** | Docker / Node.js |
 
 ---
@@ -73,7 +75,7 @@ Book driving range, lessons, adventure golf & parties with instant confirmation
 <td align="center" width="25%">
 <img src="https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=300&h=200&fit=crop" width="100%" alt="Adventure Golf" /><br/>
 <b>🦕 Adventure Golf Pages</b><br/>
-Dedicated pages for Jurassic & Volcano courses with pricing
+Dedicated pages for Jurassic & Volcano courses with PKR pricing
 </td>
 <td align="center" width="25%">
 <img src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=300&h=200&fit=crop" width="100%" alt="Golf Lessons" /><br/>
@@ -95,7 +97,7 @@ Customers submit reviews, moderation system, star ratings
 |---------|----------|---------|
 | **🗓️ Online Booking** | Form with date/time picker, activity selector | `POST /api/bookings` — validates & stores in SQLite |
 | **📧 Newsletter** | Inline subscribe form with live feedback | `POST /api/newsletter` — deduplicates emails |
-| **📞 Contact Form** | Full contact page with Google Maps embed | `POST /api/contact` — stores messages |
+| **📞 Contact Form** | Full contact page with Google Maps embed (Islamabad) | `POST /api/contact` — stores messages |
 | **⭐ Reviews** | Star rating cards on homepage, submit form on contact page | `GET/POST /api/reviews` — CRUD with moderation |
 | **🎥 Hero Video** | Full-screen cinematic looping background | Served as static asset |
 | **🖱️ Custom Cursor** | Interactive green cursor with glow trail | Pure JS, no library |
@@ -105,7 +107,22 @@ Customers submit reviews, moderation system, star ratings
 
 ---
 
-## 🖼️ Pages Preview
+## � Pricing (PKR)
+
+| Service | Price |
+|---------|------:|
+| **Private Golf Lesson** | PKR 5,000 / 30 min |
+| **Group Lesson** | PKR 3,000 / person |
+| **Junior Academy** | PKR 2,500 / session |
+| **Video Swing Analysis** | PKR 7,000 / session |
+| **Jurassic Course (Adults)** | PKR 2,500 |
+| **Jurassic Course (Children)** | PKR 2,000 |
+| **Volcano Course (Adults)** | PKR 3,000 |
+| **Volcano Course (Children)** | PKR 2,500 |
+
+---
+
+## �🖼️ Pages Preview
 
 <div align="center">
 
