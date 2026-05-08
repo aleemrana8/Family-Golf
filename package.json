@@ -1,0 +1,11 @@
+{
+  "name": "family-golf",
+  "version": "1.0.0",
+  "description": "Sidcup Family Golf - Static website",
+  "scripts": {
+    "start": "npx serve -s . -l 3000",
+    "dev": "npx serve -s . -l 3000"
+  },
+  "keywords": ["golf", "website"],
+  "license": "MIT"
+}
