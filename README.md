@@ -1,6 +1,10 @@
 <div align="center">
 
-# ⛳ Family Golf — Full-Stack Golf Experience Platform
+# ⛳ Aleem Family Golf — Full-Stack Golf Experience Platform
+
+<img src="public/images/logo.png" alt="Aleem Family Golf Logo" width="200" />
+
+<br/>
 
 <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1200&h=400&fit=crop&crop=center" alt="Golf Course Banner" width="100%" />
 
@@ -20,7 +24,7 @@
 [![API](https://img.shields.io/badge/REST_API-Included-blue?style=for-the-badge)]()
 [![Tests](https://img.shields.io/badge/Tests-21_Passing-success?style=for-the-badge)]()
 
-**A modern full-stack web application for Sidcup Family Golf — featuring online booking, contact forms, newsletter subscriptions, customer reviews, GSAP scroll animations, and a SQLite-powered backend. Includes a full CI/CD pipeline with GitHub Actions, automated testing, Docker builds, and deploy verification. No `.html` extensions — clean server-side routing throughout.**
+**A modern full-stack web application for Aleem Family Golf — featuring online booking, contact forms, newsletter subscriptions, customer reviews, GSAP scroll animations, and a SQLite-powered backend. Includes a full CI/CD pipeline with GitHub Actions, automated testing, Docker builds, and deploy verification. No `.html` extensions — clean server-side routing throughout.**
 
 [Live Demo](#-getting-started) · [API Docs](#-api-endpoints) · [CI/CD Pipeline](#-cicd-pipeline) · [Docker Setup](#-run-with-docker)
 
@@ -363,7 +367,10 @@ This project is licensed under the **MIT License**.
 
 <img src="https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=250&fit=crop&crop=center" alt="Golf Sunset" width="80%" />
 
-**Built with ❤️ by [Aleem Rana](https://github.com/aleemrana8)**
+**Built with ❤️ by [Aleem Akhtar](https://github.com/aleemrana8)**
+
+📍 Hostel City, Park Road, Islamabad, Pakistan
+📞 +92 315 166 4843 · ✉️ raleem811811@gmail.com
 
 *Full-stack Node.js + Express + SQLite + GSAP — From static page to production platform*
 

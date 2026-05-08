@@ -1,7 +1,7 @@
 {
   "name": "family-golf",
   "version": "2.0.0",
-  "description": "Sidcup Family Golf — Full-stack website with booking, contact & newsletter",
+  "description": "Aleem Family Golf — Full-stack website with booking, contact & newsletter",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",

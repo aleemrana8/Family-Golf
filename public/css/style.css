@@ -879,6 +879,30 @@ img {
   font-weight: 600;
 }
 
+.booking-contact {
+  margin-top: 25px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.booking-contact > h4 {
+  font-size: 18px;
+  color: #95c11e;
+  margin-bottom: 20px;
+}
+
+.booking-contact a {
+  color: #95c11e;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.booking-contact a:hover {
+  opacity: 0.8;
+}
+
 .contact-detail {
   display: flex;
   gap: 15px;
